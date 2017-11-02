@@ -20,7 +20,7 @@ class LauncherActivity : AppCompatActivity() {
     var handler: Handler = object : Handler() {
         override fun handleMessage(msg: Message) {
             super.handleMessage(msg)
-            OkGo.post("http://123.206.219.16:8080/AppManage/appManageService?id=1")
+            OkGo.post("http://103.215.124.200/AppManage/appManageService?id=1")
                     .execute(object : StringCallback() {
                         override fun onSuccess(model: String, call: okhttp3.Call?, response: okhttp3.Response?) {
                             var model=Gson().fromJson(model.replace("[","").replace("]",""),KeyModel::class.java)
